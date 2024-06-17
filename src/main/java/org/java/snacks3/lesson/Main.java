@@ -23,12 +23,12 @@ public class Main {
 		nuovoRegistro.stampaStudenti();
 		
 		//Riempiamo il resto dell'array con altri 20 studenti
-				for(int i=11;i<=30;i++) {
+		for(int i=11;i<=30;i++) {
 					
-					Studente studente = new Studente("nome"+i,"cognome"+i,18+i );
-					nuovoRegistro.aggiungiStudente(studente);
+			Studente studente = new Studente("nome"+i,"cognome"+i,18+i );
+			nuovoRegistro.aggiungiStudente(studente);
 					
-				}
+		}
 				
 		//Stampiamo il registro completo
 		System.out.println("\nStato del registro completo: \n");
