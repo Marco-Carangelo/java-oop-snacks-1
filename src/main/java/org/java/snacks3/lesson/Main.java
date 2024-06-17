@@ -10,30 +10,21 @@ public class Main {
 		
 		RegistroStudenti nuovoRegistro = new RegistroStudenti();
 		
-		//Creiamo 10 istanze dell'oggetto studente
+		//Creiamo 10 istanze dell'oggetto studente e stampiamo il registro ad ogni iterazione
 		for(int i=1;i<=10;i++) {
 			
 			Studente studente = new Studente("nome"+i,"cognome"+i,17+i );
 			nuovoRegistro.aggiungiStudente(studente);
 			
+			//Stampa di controllo dello stato del registro ad ogni inserimento
+			System.out.println("Stato del registro all'inserimento di "+ i +"studenti: \n");
+			nuovoRegistro.stampaStudenti();
+			
 		}
 		
-		//Facciamo una prima stampa dopo l'inserimento dei primi 10 studenti
-		System.out.println("Stato del registro all'inserimento dei primi 10 studenti: \n");
-		nuovoRegistro.stampaStudenti();
 		
-		//Riempiamo il resto dell'array con altri 20 studenti
-		for(int i=11;i<=30;i++) {
-					
-			Studente studente = new Studente("nome"+i,"cognome"+i,18+i );
-			nuovoRegistro.aggiungiStudente(studente);
-					
-		}
-				
-		//Stampiamo il registro completo
-		System.out.println("\nStato del registro completo: \n");
-		nuovoRegistro.stampaStudenti();
-	}
+		
 	
 
+}
 }
